@@ -19,8 +19,17 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
+    
     steps:
+      - name: workflow permission
+        # You may pin to the exact commit or the version.
+        # uses: 74th/workflow-permission-action@61b695d54d72c612459668d29fca41281a0f49d4
+        uses: 74th/workflow-permission-action@1.0.0
+        with:
+          # permitted user names separated by ,
+          users: devendrarawat 
+          
       - uses: actions/checkout@v1
       - name: npm install and build webpack
         run: |
