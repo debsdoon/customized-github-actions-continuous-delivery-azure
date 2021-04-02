@@ -34,7 +34,7 @@ jobs:
         uses: 74th/workflow-permission-action@1.0.0
         with:
           # permitted user names separated by ,
-          users: devendrarawat 
+          users: DevendraRawat 
           
       - uses: actions/checkout@v1
       - name: npm install and build webpack
