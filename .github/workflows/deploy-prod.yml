@@ -8,18 +8,18 @@ on:
     inputs:
       environmentname:
         description: Environment Name
-        default: destroy
+        default: staging
         required: true
 
 env:
-  DOCKER_IMAGE_NAME: DevendraRawat-azure-ttt # Must not exist as a package associated with a different repo!
+  DOCKER_IMAGE_NAME: debsdoon-azure-ttt # Must not exist as a package associated with a different repo!
   IMAGE_REGISTRY_URL: docker.pkg.github.com
   #################################################
   ### USER PROVIDED VALUES ARE REQUIRED BELOW   ###
   #################################################
   #################################################
   ### REPLACE USERNAME WITH GH USERNAME         ###
-  AZURE_WEBAPP_NAME: DevendraRawat
+  AZURE_WEBAPP_NAME: debsdoon
   #################################################
 
 jobs:
