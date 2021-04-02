@@ -20,7 +20,7 @@ env:
   #################################################
   #################################################
   ### REPLACE USERNAME WITH GH USERNAME         ###
-  AZURE_WEBAPP_NAME: DevendraRawat
+  AZURE_WEBAPP_NAME: debsdoon
   #################################################
 
 jobs:
