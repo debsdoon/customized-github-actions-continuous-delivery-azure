@@ -6,8 +6,8 @@ on:
       - main
   workflow_dispatch:
     inputs:
-      mode:
-        description: Bump Version
+      environmentname:
+        description: Environment Name
         default: destroy
         required: true
 
@@ -19,7 +19,7 @@ env:
   #################################################
   #################################################
   ### REPLACE USERNAME WITH GH USERNAME         ###
-  AZURE_WEBAPP_NAME: DevendraRawat-ttt-app
+  AZURE_WEBAPP_NAME: DevendraRawat
   #################################################
 
 jobs:
@@ -85,7 +85,7 @@ jobs:
       - name: Deploy web app container
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{env.AZURE_WEBAPP_NAME}}
+          app-name: ${{env.AZURE_WEBAPP_NAME}}${{github.event.inputs.environmentname}}
           images: ${{env.IMAGE_REGISTRY_URL}}/${{ github.repository }}/${{env.DOCKER_IMAGE_NAME}}:${{ github.sha }}
 
       - name: Azure logout
